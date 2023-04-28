@@ -1,0 +1,78 @@
+{
+    "Description": {
+        "scope": "mjscript",
+        "prefix": "description",
+        "description": "生成一个对话组的描述",
+        "body": [
+            "/** 本台词用于${1: }场景的${2: }对话",
+            "* 修改日期：${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DATE}",
+            "*/"
+        ]
+    },
+    "Image": {
+        "scope": "mjscript",
+        "prefix": "image",
+        "description": "立绘",
+        "body": "[image=$1]"
+    },
+    "Image-diff": {
+        "scope": "mjscript",
+        "prefix": "image-diff",
+        "description": "立绘差分",
+        "body": "[image-diff=$1]"
+    },
+    "Image-align": {
+        "scope": "mjscript",
+        "prefix": "image-align",
+        "description": "图片对齐",
+        "body": "[image-align=$1]"
+    },
+    "Text-align": {
+        "scope": "mjscript",
+        "prefix": "text-align",
+        "description": "文字对齐",
+        "body": "[text-align=$1]"
+    },
+    "Text-duration": {
+        "scope": "mjscript",
+        "prefix": "text-duration",
+        "description": "文字出现时间",
+        "body": "[text-duration=$1]"
+    },
+    "Voice": {
+        "scope": "mjscript",
+        "prefix": "voice",
+        "description": "人物语音",
+        "body": "[voice=$1]"
+    },
+    "Bgm": {
+        "scope": "mjscript",
+        "prefix": "bgm",
+        "description": "背景音乐",
+        "body": "[bgm=$1]"
+    },
+    "Anim": {
+        "scope": "mjscript",
+        "prefix": "anim",
+        "description": "动画",
+        "body": "[anim=$1]"
+    },
+    "Left": {
+        "scope": "mjscript",
+        "prefix": "left",
+        "description": "左对齐",
+        "body": "LEFT"
+    },
+    "Right": {
+        "scope": "mjscript",
+        "prefix": "right",
+        "description": "右对齐",
+        "body": "RIGHT"
+    },
+    "Middle": {
+        "scope": "mjscript",
+        "prefix": "middle",
+        "description": "居中",
+        "body": "MIDDLE"
+    }
+}

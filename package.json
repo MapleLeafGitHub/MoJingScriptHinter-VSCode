@@ -1,0 +1,32 @@
+{
+  "name": "mojing-script",
+  "displayName": "MoJing-Script-Hinter",
+  "description": "An extension for Project MoJing",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mjscript",
+      "aliases": ["mjscript", "mjscript"],
+      "extensions": [".mjs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mjscript",
+      "scopeName": "main.mjs",
+      "path": "./syntaxes/mjscript.tmLanguage.json"
+    }],
+    "snippets": [
+      {
+        "language": "mjscript", 
+        "path": "snippets/mjs.code-snippets" 
+      }
+    ]
+  }
+  
+}

@@ -1,0 +1,115 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "mjscript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#enum-ids"
+		},
+		{
+			"include": "#attribute-value"
+		},
+		{
+			"include": "#numeric-literal"
+		},
+		{
+			"include": "#character-name"
+		},
+		{
+			"include": "#scr-text"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.mjscript",
+				"match": "\\b(bgm|anim|image-diff|image-align|image|text-duration|text-align|voice)\\b"
+			},{
+				"name": "keyword.operator.assignment.mjscript",
+				"match": "="
+			},{
+				"name": "punctuation.section.block.begin",
+				"match": "\\{"
+			},{
+				"name": "punctuation.section.block.end",
+				"match": "\\}"
+			},{
+				"name": "punctuation.section.group.begin",
+				"match": "\\("
+			},{
+				"name": "punctuation.section.group.begin",
+				"match": "\\)"
+			},{
+				"name": "punctuation.section.brackets.begin",
+				"match": "\\["
+			},{
+				"name": "punctuation.section.brackets.begin",
+				"match": "\\]"
+			}]
+		},
+		"enum-ids": {
+			"patterns": [{
+				"name": "keyword.other.mjscript",
+				"match": "\\b(BLACK|WHITE|LEFT|RIGHT|MIDDLE)\\b"
+			}]
+		},
+		"attribute-value": {
+			"patterns": [
+				{
+					"include": "#enum-ids"
+				},
+				{
+					"name": "string.quoted.double.mjscript",
+					"match": "(?<==)\\s*\\b.*\\b\\s*(?=\\])"
+				},
+				{
+					"name": "string.quoted.double.mjscript",
+					"match": "(?<=\\{)\\s*\\b.*\\b\\s*(?=\\})"
+				}
+			]
+		},
+		"character-name": {
+			"patterns": [
+				{
+					"name": "markup.heading.mjscript",
+					"match": "(?<=\\()\\s*\\b.*\\b\\s*(?=\\))"
+				}
+			]
+		},
+		"scr-text": {
+			"patterns": [
+				{
+					"name": "variable.other.mjscript",
+					"match": "(?<=\\(.*\\))\\s*\\b.*\\b"
+				}
+			]
+		},
+		"numeric-literal": {
+			"patterns": [
+				{
+					"name": "constant.numeric.mjscript",
+					"match": "[+-]?(\\d*\\.\\d+|\\d+\\.\\d*|\\d+)"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.mjscript",
+					"match": "//.*\\n"
+				},
+				{
+					"name": "comment.block.mjscript",
+					"begin": "/\\*(?!/)",
+					"end": "\\*/"
+				}
+			]
+		}
+	},
+	"scopeName": "main.mjs"
+}
