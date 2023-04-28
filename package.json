@@ -3,12 +3,18 @@
   "displayName": "MoJing-Script-Hinter",
   "description": "An extension for Project MoJing",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MapleLeafGitHub/MoJingScriptHinter-VSCode"
+  },
+  "publisher": "lirewriter",
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "icon": "icon.png",
   "contributes": {
     "languages": [{
       "id": "mjscript",
