@@ -2,7 +2,7 @@
   "name": "mojing-script",
   "displayName": "MoJing-Script-Hinter",
   "description": "An extension for Project MoJing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/MapleLeafGitHub/MoJingScriptHinter-VSCode"
@@ -16,23 +16,31 @@
   ],
   "icon": "icon.png",
   "contributes": {
-    "languages": [{
-      "id": "mjscript",
-      "aliases": ["mjscript", "mjscript"],
-      "extensions": [".mjs"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "mjscript",
-      "scopeName": "main.mjs",
-      "path": "./syntaxes/mjscript.tmLanguage.json"
-    }],
+    "languages": [
+      {
+        "id": "mjscript",
+        "aliases": [
+          "mjscript",
+          "mjscript"
+        ],
+        "extensions": [
+          ".mjs"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mjscript",
+        "scopeName": "main.mjs",
+        "path": "./syntaxes/mjscript.tmLanguage.json"
+      }
+    ],
     "snippets": [
       {
-        "language": "mjscript", 
-        "path": "snippets/mjs.code-snippets" 
+        "language": "mjscript",
+        "path": "snippets/mjs.code-snippets"
       }
     ]
   }
-  
 }
